@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Checkbox
+        </title>
+    </head>
+    <body>
+    	<h1>Introvertido</h1>
+        <b>
+            Felmatico:
+        </b>
+        <input id="lista1" type="checkbox" value="1">
+            <br>
+                <b>
+                    Sanguineos:
+                </b>
+                <input id="lista2" type="checkbox" value="1">
+                    
+                    <h1>Extrovertido</h1>
+                        <b>
+                            Melancolico:
+                        </b>
+                        <input id="lista3" type="checkbox" value="2">
+                            <br>
+                                <b>
+                                    Colericos:
+                                </b>
+                                <input id="lista4" type="checkbox" value="3">
+                                    <p style="text-align: justify;
+    text-justify: inter-word;">
+                                    </p>
+                                </input>
+                            </br>
+                        </input>
+                    </br>
+                </input>
+            </br>
+        </input>
+    </body>
+    <script src="js/jquery.1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+		$("input[type=checkbox]").on('click', function(){
+			if ($("#lista1").prop("checked") == true ) {
+				$("p").text("Es tranquilo, nunca pierde la compostura y casi nunca se enfada. Por su equilibrio, es el más agradable de todos los temperamentos. Trata de no involucrarse demasiado en las actividades de los demás. Por lo general suele ser una persona apática, además de tener un buena verborrea. No busca ser un líder, sin embargo puede llegar a ser un líder muy capaz.");
+				$("#lista2").prop("checked", false);
+				$("#lista3").prop("checked", false);
+				$("#lista4").prop("checked", false);
+			} if ($("#lista3").prop("checked") == true ) {
+				$("p").text("Basado en un tipo de sistema nervioso débil, posee una muy alta sensibilidad, un alto nivel de actividad y concentración de la atención, así como una baja reactividad ante los estímulos del medio, y una baja correlación de la actividad a la reactividad; es introvertido y lo caracteriza una baja flexibilidad a los cambios en el ambiente.");
+				$("#lista1").prop("checked", false);
+				$("#lista2").prop("checked", false);
+				$("#lista4").prop("checked", false);
+			}if ($("#lista2").prop("checked") == true) {
+				$("p").text("Es receptiva por naturaleza, las impresiones externas encuentran fácil entrada en su interior en donde provocan un alud de respuestas. Tiende a tomar decisiones basándose en los sentimientos más que en la reflexión. Es tan comunicativo que, es considerado un súper extrovertido.");
+				$("#lista1").prop("checked", false);
+				$("#lista3").prop("checked", false);
+				$("#lista4").prop("checked", false);
+			} if ( $("#lista4").prop("checked") == true) {
+				$("p").text("Está basado en un tipo de sistema nervioso rápido y desequilibrado, posee alta sensibilidad y un nivel de baja actividad y concentración de la atención, aunque tiene alta reactividad a los estímulos del medio y una muy alta correlación también es flexible a los cambios de ambiente.");
+				$("#lista1").prop("checked", false);
+				$("#lista2").prop("checked", false);
+				$("#lista3").prop("checked", false);
+			}
+		});
+	});
+    </script>
+</html>
